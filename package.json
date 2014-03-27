@@ -6,7 +6,6 @@
   "license": "MIT",
   "author": "Ryan Van Etten",
   "keywords": ["ux", "preference", "storage", "browser", "ender"],
-  "private": true,
   "main": "ux.js",
   "repository": {
     "type": "git",
