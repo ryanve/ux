@@ -19,8 +19,6 @@
 - <var>feature</var> can be any string
 - features are either *enabled*, *disabled*, or *unknown*
 
-* * *
-
 <a name="enabled"></a>
 ####`ux.enabled()`
 - Get an array containing the names of all enabled features
@@ -48,12 +46,15 @@
 - Test if <var>feature</var> is known (either enabled or disabled)
 - <b>@return</b> boolean
 
+<a name="enable"></a>
 #### `ux.enable(feature)`
 - Enable a feature and trigger listeners
 
+<a name="disable"></a>
 #### `ux.disable(feature)`
 - Disable a feature and trigger listeners
 
+<a name="forget"></a>
 #### `ux.forget(feature)`
 - Forget feature and trigger listeners
 
@@ -78,7 +79,7 @@
  - `ux.forget.off(feature?, listener?)`
  - etc.
 
-## Emitter example
+#### Emitter example
 ```js
 // Listen for when 'crazycolors' is enabled
 ux.enable.on('crazycolors', function(feature) {
