@@ -1,0 +1,52 @@
+{
+  "name": "ux",
+  "description": "website user preference API",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ryanve/ux",
+  "license": "MIT",
+  "author": "Ryan Van Etten",
+  "keywords": ["ux", "preference", "storage", "browser", "ender"],
+  "private": true,
+  "main": "ux.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanve/ux.git"
+  },
+  "dependencies": {
+    "cargo": "~0.7.0",
+    "energy": "~0.3.0"
+  },
+  "optionalDependencies": {},
+  "devDependencies": {
+    "aok": "~1.8.1",
+    "universal": "ryanve/universal#87dff3da7852c90b26891acad1ff4ceae15ad612",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.9.0"
+  },
+  "jshintConfig": {
+    "asi": true,
+    "boss": true,
+    "browser": true,
+    "debug": true,
+    "devel": true,
+    "eqnull": true,
+    "evil": true,
+    "expr": true,
+    "globals": {
+      "define": true,
+      "ender": true
+    },
+    "jquery": true,
+    "lastsemic": true,
+    "latedef": "nofunc",
+    "laxcomma": true,
+    "maxerr": 10,
+    "node": true,
+    "sub": true,
+    "supernew": true,
+    "undef": true,
+    "unused": true,
+    "worker": true
+  }
+}
