@@ -36,8 +36,11 @@
   aok('enabled logical', !enabled.some(ux.disabled))
   aok('disabled logical', !disabled.some(ux.enabled))
 
-  var now = (new Date).getTime(), pos = 'enabled-' + now, neg = 'disabled-' + now, pos2 = pos + '2'
-  
+  var now = (new Date).getTime()
+  var pos = 'enabled-' + now
+  var neg = 'disabled-' + now
+  var pos2 = pos + '2'
+
   ux.enable.once(pos, function(v) {
     aok('.enable listener this', this === ux.enable)
     aok('.enable listener args', v == pos)
