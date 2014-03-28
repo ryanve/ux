@@ -17,8 +17,14 @@
   var disabled = ux.disabled()
 
   if (typeof location != 'undefined') {
+    // abort subsequent tests in ie8-
+    if (![].some) return void aok('exists', 'enable' in ux)
+    
+    // make fails more noticeable in the console
     aok.prototype.pass = 'ok'
     aok.prototype.fail = 'FAIL'
+    
+    // log the restored arrays
     aok.info(known)
     aok.info(enabled)
     aok.info(disabled)

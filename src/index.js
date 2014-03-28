@@ -8,7 +8,6 @@
     , energy = require('energy')
     , namespace = 'ux@0.0'
     , loc = typeof location != 'undefined' && location
-    , keys = Object.keys || function() { return [] }
     , storage = cargo[loc.hostname ? 'local' : 'session']
     , stores = storage.stores !== false
     , get = stores ? function() {
@@ -23,6 +22,12 @@
         else storage.set(namespace, encode(updated))
       } : function(updated) {
         if (typeof updated == 'object') cache = updated
+      }
+    , keys = Object.keys
+    , filter = keys ? function(o, fn, scope) {
+        return keys(o).filter(fn, scope)
+      } : function() {
+        return []
       }
   
   /**
@@ -64,7 +69,7 @@
      */
     return function(feature) {
       var o = get()
-      return !arguments.length ? keys(o).filter(function(k) {
+      return !arguments.length ? filter(o, function(k) {
         return o[k] === value
       }) : o[normalize(feature)] === value
     }
@@ -93,7 +98,7 @@
    */
   function known(feature) {
     var o = get()
-    return !arguments.length ? keys(o).filter(function(k) {
+    return !arguments.length ? filter(o, function(k) {
       return typeof o[k] == 'boolean'
     }) : typeof o[normalize(feature)] == 'boolean'
   }
