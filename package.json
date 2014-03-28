@@ -1,7 +1,7 @@
 {
   "name": "ux",
   "description": "website user preference API",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/ryanve/ux",
   "license": "MIT",
   "author": "Ryan Van Etten",
