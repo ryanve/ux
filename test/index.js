@@ -7,7 +7,7 @@
     yes: function(v) { return v === true },
     no: function(v) { return v === false }
   }
-  
+
   var common = typeof module != 'undefined' && !!module.exports
   var aok = common ? require('aok') : root.aok
   var ux = common ? require('../src') : root[name]
@@ -35,6 +35,13 @@
   aok('.known logical', known.length === enabled.length + disabled.length)
   aok('.enabled logical', !enabled.some(ux.disabled))
   aok('.disabled logical', !disabled.some(ux.enabled))
+
+  ;['forget', 'enable', 'disable'].forEach(function(method) {
+    var invalids = [void 0, null, [], true]
+    aok('.' + method + ' errors', !invalids.some(this, method))
+  }, aok.can(function(v) {
+    ux[this](v)
+  }))
 
   var now = (new Date).getTime()
   var pos = 'enabled-' + now
