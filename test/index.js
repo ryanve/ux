@@ -24,17 +24,17 @@
     aok.info(disabled)
   }
   
-  aok('known keys', known.every(is.str))
-  aok('enabled keys', enabled.every(is.str))
-  aok('disabled keys', disabled.every(is.str))
+  aok('.known keys', known.every(is.str))
+  aok('.enabled keys', enabled.every(is.str))
+  aok('.disabled keys', disabled.every(is.str))
   
-  aok('enabled', is.arr(enabled))
-  aok('disabled', is.arr(disabled))
-  aok('known', is.arr(known))
+  aok('.enabled', is.arr(enabled))
+  aok('.disabled', is.arr(disabled))
+  aok('.known', is.arr(known))
   
-  aok('known logical', known.length === enabled.length + disabled.length)
-  aok('enabled logical', !enabled.some(ux.disabled))
-  aok('disabled logical', !disabled.some(ux.enabled))
+  aok('.known logical', known.length === enabled.length + disabled.length)
+  aok('.enabled logical', !enabled.some(ux.disabled))
+  aok('.disabled logical', !disabled.some(ux.enabled))
 
   var now = (new Date).getTime()
   var pos = 'enabled-' + now
@@ -61,14 +61,14 @@
     
   ux.enable(pos)
   ux.disable(neg)
-  aok('enable', ux.enabled(pos))
-  aok('disable', ux.disabled(neg))
-  aok('disable', ux.disabled(neg))
+  aok('.enable', ux.enabled(pos))
+  aok('.disable', ux.disabled(neg))
+  aok('.disable', ux.disabled(neg))
   ux.forget(pos2)
   
   if (2 < known.length) {
     ux.forget()
-    aok('forget all', !ux.known().length)
+    aok('.forget all', !ux.known().length)
   }
   
   setTimeout(function() {
