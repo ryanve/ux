@@ -1,7 +1,7 @@
 /*!
- * ux 0.0.1+201403281801
+ * ux 0.0.1+201404021900
  * https://github.com/ryanve/ux
- * MIT License, 2014 Ryan Van Etten
+ * MIT License (c) 2014 Ryan Van Etten
  */
 !function(root, name, make) {
   if (typeof module != 'undefined' && module.exports) module.exports = make(require)
@@ -67,7 +67,7 @@
    * @param {boolean} value
    * @return {Function}
    */
-  function getter(value) {  
+  function getter(value) {
     /**
      * @param {string=} feature
      * @return {boolean|Array}
@@ -84,7 +84,7 @@
    * @param {boolean} value
    * @return {Function}
    */
-  function setter(value) {  
+  function setter(value) {
     /**
      * @param {string} feature
      */

@@ -62,7 +62,7 @@
    * @param {boolean} value
    * @return {Function}
    */
-  function getter(value) {  
+  function getter(value) {
     /**
      * @param {string=} feature
      * @return {boolean|Array}
@@ -79,7 +79,7 @@
    * @param {boolean} value
    * @return {Function}
    */
-  function setter(value) {  
+  function setter(value) {
     /**
      * @param {string} feature
      */

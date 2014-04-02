@@ -18,7 +18,7 @@
   "optionalDependencies": {},
   "devDependencies": {
     "aok": "~1.8.1",
-    "universal": "ryanve/universal#87dff3da7852c90b26891acad1ff4ceae15ad612",
+    "universal": "ryanve/universal#08f6e375fc6a6fd508280c7f1bddf91a5df7d53c",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-jshint": "~0.9.0"
@@ -34,16 +34,20 @@
     "expr": true,
     "globals": {
       "define": true,
-      "ender": true
+      "ender": true 
     },
     "jquery": true,
     "lastsemic": true,
     "latedef": "nofunc",
     "laxcomma": true,
+    "maxcomplexity": 15,
     "maxerr": 10,
+    "maxlen": 115,
+    "maxparams": 4,
     "node": true,
     "sub": true,
     "supernew": true,
+    "trailing": true,
     "undef": true,
     "unused": true,
     "worker": true
