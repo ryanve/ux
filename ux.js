@@ -1,5 +1,5 @@
 /*!
- * ux 0.0.1+201404021900
+ * ux 0.1.0+201405032332
  * https://github.com/ryanve/ux
  * MIT License (c) 2014 Ryan Van Etten
  */
@@ -118,22 +118,12 @@
     else throw new Error
     forget.emit(feature, feature)
   }
-  
-  /**
-   * @param {Object} o
-   * @param {Object} src
-   * @return {Object}
-   */
-  function extend(o, src) {
-    for (var k in src) if (src[k] != null) o[k] = src[k]
-    return o
-  }
 
   return {
     // convert the setters into emitters
-    'enable': extend(setter(true), energy()),
-    'disable': extend(setter(false), energy()),
-    'forget': extend(forget, energy()),
+    'enable': energy.to(setter(true)),
+    'disable': energy.to(setter(false)),
+    'forget': energy.to(forget),
     'enabled': getter(true),
     'disabled': getter(false),
     'known': known
