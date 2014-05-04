@@ -1,5 +1,6 @@
 !function(root, name) {
   var emitted = 0
+  var toggled = 0
   var is = {
     arr: Array.isArray || function(v) { return v instanceof Array },
     str: function(v) { return typeof v == 'string' },
@@ -66,6 +67,12 @@
     emitted++
   })
   
+  ux.toggle.once(pos, function(v) {
+    aok('.toggle listener this', this === ux.toggle)
+    aok('.toggle listener args', v == pos)
+    toggled++
+  })
+  
   ux.forget.once(pos2, function(v) {
     aok('.forget listener this', this === ux.forget)
     aok('.forget listener args', v == pos2)
@@ -78,6 +85,17 @@
   aok('.disable', ux.disabled(neg))
   aok('.disable', ux.disabled(neg))
   ux.forget(pos2)
+
+  var beforeToggle = ux.enabled(pos)
+  var toggledStates = ['enabled', 'disabled']
+  beforeToggle && toggledStates.reverse()
+  toggledStates.forEach(function(state, i) {
+    ux.toggle(pos)
+    aok('.toggle ' + i, ux[state](pos))
+  })
+
+  aok('.toggle after', ux.enabled(pos) === beforeToggle)
+  aok('.toggle emit', toggled)
   
   if (2 < known.length) {
     ux.forget()
