@@ -1,5 +1,5 @@
 /*!
- * ux 0.1.0+201405032332
+ * ux 0.2.0+201405042042
  * https://github.com/ryanve/ux
  * MIT License (c) 2014 Ryan Van Etten
  */
@@ -98,6 +98,15 @@
   }
   
   /**
+   * @this {{enabled:Function, enable:Function, disable:Function}}
+   * @param {string} feature
+   */
+  function toggle(feature) {
+    this[this.enabled(feature) ? 'disable' : 'enable'](feature)
+    toggle.emit(feature, feature)
+  }
+
+  /**
    * @param {string=} feature
    * @return {boolean|Array}
    */
@@ -123,6 +132,7 @@
     // convert the setters into emitters
     'enable': energy.to(setter(true)),
     'disable': energy.to(setter(false)),
+    'toggle': energy.to(toggle),
     'forget': energy.to(forget),
     'enabled': getter(true),
     'disabled': getter(false),
