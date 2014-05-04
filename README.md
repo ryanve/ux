@@ -12,6 +12,7 @@
 - <a name="emitters-group"></a>[<b>Emitters</b>](#emitters)
   - [<b>ux.enable</b>(feature)](#enable)
   - [<b>ux.disable</b>(feature)](#disable)
+  - [<b>ux.toggle</b>(feature)](#toggle)
   - [<b>ux.forget</b>(feature?)](#forget)
 
 #### Notes
@@ -53,6 +54,10 @@
 <a name="disable"></a>
 #### `ux.disable(feature)`
 - Disable a feature and trigger listeners
+
+<a name="toggle"></a>
+#### `ux.toggle(feature)`
+- Toggle (either enable or disable) a feature and trigger listeners
 
 <a name="forget"></a>
 #### `ux.forget(feature)`
