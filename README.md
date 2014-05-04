@@ -62,7 +62,7 @@
 - Forget *all* features
 
 <a name="emitters"></a>
-### [Emitters](#emitters-group) have [emitter methods](https://github.com/ryanve/energy/tree/0.3.1#methods)
+### [Emitters](#emitters-group) have [emitter methods](https://github.com/ryanve/energy/tree/0.4.0#methods)
 
  - `.on(feature, listener)`
  - `.off(feature?, listener?)`
