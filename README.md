@@ -37,19 +37,19 @@
 
 <a name="enable"></a>
 #### `ux.enable(feature)`
-- Enable a feature and trigger listeners
+- Enable <var>feature</var>, and trigger associated listeners
 
 <a name="disable"></a>
 #### `ux.disable(feature)`
-- Disable a feature and trigger listeners
+- Disable <var>feature</var>, and trigger associated listeners
 
 <a name="toggle"></a>
 #### `ux.toggle(feature)`
-- Toggle (either enable or disable) a feature and trigger listeners
+- Toggle (either enable or disable) <var>feature</var>, and trigger associated listeners
 
 <a name="forget"></a>
 #### `ux.forget(feature)`
-- Forget feature and trigger listeners
+- Forget <var>feature</var>, and trigger listeners
 
 #### `ux.forget()`
 - Forget *all* features
