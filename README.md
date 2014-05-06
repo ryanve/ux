@@ -21,31 +21,19 @@
 - features are either *enabled*, *disabled*, or *unknown*
 
 <a name="enabled"></a>
-####`ux.enabled()`
-- Get an array containing the names of all enabled features
-- <b>@return</b> array
-
-####`ux.enabled(feature)`
-- Test if <var>feature</var> is enabled
-- <b>@return</b> boolean
+#### `ux.enabled(feature?)`
+- `ux.enabled()`: Get an <b>array</b> containing the names of all enabled features
+- `ux.enabled(feature)`: Test if <var>feature</var> is enabled. Return <b>boolean</b>
 
 <a name="disabled"></a>
-####`ux.disabled()`
-- Get an array containing the names of all disabled features
-- <b>@return</b> array
-
-####`ux.disabled(feature)`
-- Test if <var>feature</var> is disabled
-- <b>@return</b> boolean
+#### `ux.disabled(feature?)`
+- `ux.disabled()`: Get an <b>array</b> containing the names of all disabled features
+- `ux.disabled(feature)`: Test if <var>feature</var> is disabled. Return <b>boolean</b>
 
 <a name="known"></a>
-####`ux.known()`
-- Get an array containing the names of all known features
-- <b>@return</b> array
-
-####`ux.known(feature)`
-- Test if <var>feature</var> is known (either enabled or disabled)
-- <b>@return</b> boolean
+#### `ux.known(feature?)`
+- `ux.known()`: Get an <b>array</b> containing the names of all known features
+- `ux.known(feature)`: Test if <var>feature</var> is known. Return <b>boolean</b>
 
 <a name="enable"></a>
 #### `ux.enable(feature)`
