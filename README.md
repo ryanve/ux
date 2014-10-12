@@ -49,7 +49,7 @@
 
 <a name="forget"></a>
 #### `ux.forget(feature)`
-- Forget <var>feature</var>, and trigger listeners
+- Forget <var>feature</var>, and trigger associated listeners
 
 #### `ux.forget()`
 - Forget *all* features
