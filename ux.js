@@ -1,7 +1,6 @@
 /*!
- * ux 0.2.0+201405042042
  * https://github.com/ryanve/ux
- * MIT License (c) 2014 Ryan Van Etten
+ * @license 0BSD
  */
 !function(root, name, make) {
   if (typeof module != 'undefined' && module.exports) module.exports = make(require)
@@ -34,7 +33,7 @@
       } : function() {
         return []
       }
-  
+
   /**
    * @param {string|number} key
    * @return {string}
@@ -44,7 +43,7 @@
     if (typeof key == 'number') return '' + key
     throw new TypeError
   }
-  
+
   /**
    * @param {Object|string} data
    * @return {string}
@@ -53,7 +52,7 @@
     if (typeof data == 'string') return data
     return storage.encode(null == data ? {} : data)
   }
-  
+
   /**
    * @param {string|null} data
    * @return {Object}
@@ -62,7 +61,7 @@
     if (null == data) return {}
     return storage.decode(data)
   }
-  
+
   /**
    * @param {boolean} value
    * @return {Function}
@@ -79,7 +78,7 @@
       }) : o[normalize(feature)] === value
     }
   }
-  
+
   /**
    * @param {boolean} value
    * @return {Function}
@@ -96,7 +95,7 @@
     }
     return f
   }
-  
+
   /**
    * @this {{enabled:Function, enable:Function, disable:Function}}
    * @param {string} feature
@@ -116,7 +115,7 @@
       return typeof o[k] == 'boolean'
     }) : typeof o[normalize(feature)] == 'boolean'
   }
-  
+
   /**
    * @param {string=} feature
    */
